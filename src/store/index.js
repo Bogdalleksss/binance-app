@@ -12,7 +12,7 @@ export default new Vuex.Store({
                 payload : [],
                 info : {}
             };
-            await axios.get(`https://www.binance.com/api/v1/depth?symbol=${symbol}&limit=100`)
+            await axios.get(`https://www.binance.com/api/v1/depth?symbol=${symbol}&limit=500`)
                     .then(res => data.payload = res.data)
                     .catch(err => console.log(err))
 
